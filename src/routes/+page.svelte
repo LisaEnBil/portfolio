@@ -19,8 +19,9 @@
             your work with SvelteKit
         </p>
         <p>
-            Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to
-            read the documentation
+            Visit <a href="https://www.linkedin.com/in/lisa-gillfrost/"
+                >svelte.dev/docs/kit</a
+            > to read the documentation
         </p>
     </div>
 
@@ -43,12 +44,16 @@
     }
     .startButtonContent {
         background-color: #bab8b8;
-        height: 30vh;
-        bottom: 5vh;
+        height: calc(30vh - 43px);
+        bottom: 43px;
         left: 0vw;
         position: fixed;
         z-index: 1000;
-        width: 20vw;
+        width: 10vw;
+        border-left: 2px solid #eae9e9;
+        border-top: 2px solid #eae9e9;
+        border-right: 2px solid #656363;
+        border-bottom: 2px solid #656363;
     }
     .content {
         background-color: #bab8b8;
@@ -74,7 +79,6 @@
     }
 
     .navbarContent {
-        border: 2px solid #fd3232;
         border-top: 2px solid #ded8d8;
         background-color: #bab8b8;
         height: 40px;
