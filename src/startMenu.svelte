@@ -1,5 +1,6 @@
 <script>
     import logo from "$lib/assets/icons8-linkedin-48.png";
+    import missingPiece from "$lib/assets/Component 18.png";
 </script>
 
 <div class="menu">
@@ -7,7 +8,18 @@
     <div class="menuList">
         <a href="https://www.linkedin.com/in/lisa-gillfrost/">
             <div class="rowContent">
-                <img alt="The project logo" src={logo} />
+                <img alt="LinkedIn Icon" src={logo} />
+                <p>LinkedIn</p>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+            <div class="rowContent">
+                <enhanced:img
+                    src={missingPiece}
+                    alt="Description"
+                    sizes="min(40px, 2vw)"
+                />
+
                 <p>LinkedIn</p>
             </div>
         </a>
