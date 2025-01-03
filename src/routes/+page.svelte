@@ -1,6 +1,7 @@
 <script>
     import Button from "../button.svelte";
     import StartMenu from "../startMenu.svelte";
+    import pdfUrl from "$lib/assets/LG_CV.pdf";
 
     export let active = false;
 
@@ -12,17 +13,8 @@
 
 <div class="container">
     <div class="content">
-        <h1>Welcome</h1>
-
-        <p>
-            Create your package using @sveltejs/package and preview/showcase
-            your work with SvelteKit
-        </p>
-        <p>
-            Visit <a href="https://www.linkedin.com/in/lisa-gillfrost/"
-                >svelte.dev/docs/kit</a
-            > to read the documentation
-        </p>
+        <iframe src={pdfUrl} width="100%" height="600px" title="PDF Viewer"
+        ></iframe>
     </div>
 
     {#if active}
@@ -49,7 +41,7 @@
         left: 0vw;
         position: fixed;
         z-index: 1000;
-        width: 15vw;
+        width: 13vw;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;

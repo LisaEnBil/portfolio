@@ -52,16 +52,18 @@
                 </div>
             </a>
         </div>
-        <div class="resume"></div>
+        <div class="resume">
+            <p>Resume</p>
+        </div>
     </div>
 </div>
 
 <style>
     .appList {
-        border-bottom: 2px solid #656363;
+        border-bottom: 1px solid #656363;
     }
     .resume {
-        border-top: 2px solid #eae9e9;
+        border-top: 1px solid #eae9e9;
     }
     .bottom-image {
         padding-left: 5px;
@@ -106,5 +108,10 @@
 
     .menuList p::first-letter {
         text-decoration: underline;
+    }
+    p {
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 100;
+        font-size: small;
     }
 </style>
