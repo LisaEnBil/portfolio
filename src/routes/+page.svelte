@@ -49,7 +49,7 @@
         left: 0vw;
         position: fixed;
         z-index: 1000;
-        width: 10vw;
+        width: 15vw;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;

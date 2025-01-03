@@ -1,32 +1,76 @@
 <script>
     import logo from "$lib/assets/icons8-linkedin-48.png";
-    import missingPiece from "$lib/assets/Component 18.png";
+    import missingPiece from "$lib/assets/Component18.png";
+    import fiffigaFrun from "$lib/assets/testIcon.png";
+    import cheerMeApp from "$lib/assets/IMG_0045.jpg";
 </script>
 
 <div class="menu">
     <div class="graySpace"><p>""</p></div>
     <div class="menuList">
-        <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-            <div class="rowContent">
-                <img alt="LinkedIn Icon" src={logo} />
-                <p>LinkedIn</p>
-            </div>
-        </a>
-        <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-            <div class="rowContent">
-                <enhanced:img
-                    src={missingPiece}
-                    alt="Description"
-                    sizes="min(40px, 2vw)"
-                />
-
-                <p>LinkedIn</p>
-            </div>
-        </a>
+        <div class="appList">
+            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+                <div class="rowContent">
+                    <img alt="LinkedIn Icon" src={logo} />
+                    <p>LinkedIn</p>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+                <div class="rowContent">
+                    <img
+                        width="38"
+                        height="38"
+                        class="bottom-image"
+                        alt="Missing Piece Icon"
+                        src={missingPiece}
+                    />
+                    <p>Missing Piece</p>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+                <div class="rowContent">
+                    <img
+                        width="38"
+                        height="38"
+                        class="bottom-image fiffiga-frun"
+                        alt="Fiffiga Frun App Icon"
+                        src={fiffigaFrun}
+                    />
+                    <p>Fiffiga Frun</p>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+                <div class="rowContent">
+                    <img
+                        width="38"
+                        height="38"
+                        class="bottom-image fiffiga-frun"
+                        alt="Fiffiga Frun App Icon"
+                        src={cheerMeApp}
+                    />
+                    <p>Cheer Me App</p>
+                </div>
+            </a>
+        </div>
+        <div class="resume"></div>
     </div>
 </div>
 
 <style>
+    .appList {
+        border-bottom: 2px solid #656363;
+    }
+    .resume {
+        border-top: 2px solid #eae9e9;
+    }
+    .bottom-image {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    .fiffiga-frun {
+        border-radius: 20%;
+    }
     .menu {
         border: 0.5px solid #656363;
         display: flex;
