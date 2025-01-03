@@ -1,14 +1,9 @@
 <script>
-    import Button from "../button.svelte";
-    import StartMenu from "../startMenu.svelte";
+    import StartMenu from "../components/startMenu.svelte";
     import pdfUrl from "$lib/assets/LG_CV.pdf";
+    import NavBar from "../components/navbar.svelte";
 
-    export let active = false;
-
-    function handleClick() {
-        console.log("Clicked");
-        active = !active;
-    }
+    let active = false;
 </script>
 
 <div class="container">
@@ -23,11 +18,7 @@
         </div>
     {/if}
 </div>
-<div class="navbar">
-    <div class="navbarContent">
-        <Button on:click={handleClick} {active}>Start</Button>
-    </div>
-</div>
+<NavBar bind:active />
 
 <style>
     .container {
@@ -57,40 +48,5 @@
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
-    }
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        position: fixed;
-        height: 23vh;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        z-index: 1000;
-    }
-
-    .navbarContent {
-        border-top: 2px solid #ded8d8;
-        background-color: #bab8b8;
-        height: 40px;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-    }
-
-    h1 {
-        background-color: #797777;
-        margin: 0;
-        padding-left: 10px;
-        color: white;
-        font-family: "Segoe UI", sans-serif;
-        font-weight: 100;
-    }
-
-    p {
-        font-family: "Segoe UI", sans-serif;
-        font-weight: 100;
-        font-size: larger;
     }
 </style>
