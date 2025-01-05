@@ -3,75 +3,130 @@
     import missingPiece from "$lib/assets/Component18.png";
     import fiffigaFrun from "$lib/assets/testIcon.png";
     import cheerMeApp from "$lib/assets/IMG_0045.jpg";
+    import folder from "$lib/assets/folderFilled.png";
+
+    export let selectedItem = "";
+    $: selectedItem = "";
+    // // @ts-ignore
+    // function handleItemClick(item) {
+    //     if (item !== "LinkedIn") {
+    //         selectedItem = item;
+    //     }
+    // }
+
+    /**
+     * @param {string} item
+     */
+    function handleItemClick(item) {
+        console.log("Clicked item:", item);
+        if (item !== "LinkedIn") {
+            selectedItem = item;
+            console.log("Selected item updated:", selectedItem);
+            const event = new CustomEvent("itemSelect", { detail: item });
+            dispatchEvent(event);
+        }
+    }
 </script>
 
 <div class="menu">
     <div class="graySpace"><p>""</p></div>
     <div class="menuList">
-        <div class="appList">
-            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-                <div class="rowContent">
-                    <img alt="LinkedIn Icon" src={logo} />
-                    <p>LinkedIn</p>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-                <div class="rowContent">
-                    <img
-                        width="38"
-                        height="38"
-                        class="bottom-image"
-                        alt="Missing Piece Icon"
-                        src={missingPiece}
-                    />
-                    <p>Missing Piece</p>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-                <div class="rowContent">
-                    <img
-                        width="38"
-                        height="38"
-                        class="bottom-image fiffiga-frun"
-                        alt="Fiffiga Frun App Icon"
-                        src={fiffigaFrun}
-                    />
-                    <p>Fiffiga Frun</p>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/lisa-gillfrost/">
-                <div class="rowContent">
-                    <img
-                        width="38"
-                        height="38"
-                        class="bottom-image fiffiga-frun"
-                        alt="Fiffiga Frun App Icon"
-                        src={cheerMeApp}
-                    />
-                    <p>Cheer Me App</p>
-                </div>
-            </a>
-        </div>
-        <div class="resume">
-            <p>Resume</p>
-        </div>
+        <a href="https://www.linkedin.com/in/lisa-gillfrost/">
+            <div class="rowContent">
+                <img width="50" height="50" alt="LinkedIn Icon" src={logo} />
+                <p>LinkedIn</p>
+            </div>
+        </a>
+        <button
+            on:click={() => {
+                console.log("Fiffiga Frun");
+                handleItemClick("Fiffiga Frun");
+            }}
+        >
+            <div class="rowContent">
+                <img
+                    width="35"
+                    height="35"
+                    class="image-margin rounded-corners"
+                    alt="Fiffiga Frun App Icon"
+                    src={fiffigaFrun}
+                />
+                <p>Fiffiga Frun</p>
+            </div>
+        </button>
+        <button
+            on:click={() => {
+                console.log("CheerMeApp");
+                handleItemClick("CheerMeApp");
+            }}
+        >
+            <div class="rowContent">
+                <img
+                    width="35"
+                    height="35"
+                    class="image-margin rounded-corners"
+                    alt="Cheer Me App Icon"
+                    src={cheerMeApp}
+                />
+                <p>CheerMeApp</p>
+            </div>
+        </button>
+        <button
+            class="bottom-image"
+            on:click={() => {
+                console.log("Missing Piece");
+                handleItemClick("Missing Piece");
+            }}
+            ><div class="rowContent">
+                <img
+                    class="image-margin"
+                    width="35"
+                    height="35"
+                    alt="Missing Piece Icon"
+                    src={missingPiece}
+                />
+                <p>Missing Piece</p>
+            </div>
+        </button>
+        <button
+            on:click={() => {
+                console.log("Resume");
+                handleItemClick("Resume");
+            }}
+            ><div class="rowContent">
+                <img width="45" height="45" alt="Resume" src={folder} />
+                <p>Resume</p>
+            </div>
+        </button>
     </div>
 </div>
 
+<!-- {#each ["Missing Piece", "Fiffiga Frun", "CheerMeApp"] as item}
+<button on:click={() => handleItemClick(item)}>
+    
+    <div class="rowContent">
+        <img
+            width="38"
+            height="38"
+            class="bottom-image"
+            alt="{item} Icon"
+            src={item === "Missing Piece"
+                ? missingPiece
+                : item === "Fiffiga Frun"
+                  ? fiffigaFrun
+                  : cheerMeApp}
+        />
+        <p>{item}</p>
+    </div>
+</button>
+{/each} -->
+
 <style>
-    .appList {
-        border-bottom: 1px solid #656363;
+    .image-margin {
+        margin-left: 5px;
     }
-    .resume {
-        border-top: 1px solid #eae9e9;
-    }
-    .bottom-image {
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-    }
-    .fiffiga-frun {
-        border-radius: 20%;
+    .rounded-corners {
+        border-radius: 15%;
     }
     .menu {
         border: 0.5px solid #656363;
@@ -89,10 +144,11 @@
     .menuList {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
+        height: 100%;
     }
     .rowContent {
         display: flex;
+        align-items: center;
         flex-direction: row;
         font-family: "Segoe UI", sans-serif;
         font-weight: 100;
@@ -100,6 +156,7 @@
     .menuList a {
         text-decoration: none;
         color: inherit;
+        margin: 5px;
     }
 
     .menuList a:visited {
@@ -109,9 +166,18 @@
     .menuList p::first-letter {
         text-decoration: underline;
     }
+    button {
+        background-color: #bab8b8;
+        border: none;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+    /* #010649 */
     p {
         font-family: "Segoe UI", sans-serif;
         font-weight: 100;
         font-size: small;
+        margin: 0;
+        margin-left: 10px;
     }
 </style>
