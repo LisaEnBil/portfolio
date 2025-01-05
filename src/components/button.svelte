@@ -27,7 +27,10 @@
     }
     button.active {
         background-color: #e7e3e3;
-        border: 1px solid #626060;
         box-shadow: none;
+        border-left: 2px solid #5e5e5e;
+        border-top: 2px solid #505050;
+        border-right: 1px solid #eae9e9;
+        border-bottom: 1px solid #eae9e9;
     }
 </style>
