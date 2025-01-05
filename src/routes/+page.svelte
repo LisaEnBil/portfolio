@@ -4,6 +4,12 @@
     import NavBar from "../components/navbar.svelte";
 
     let active = false;
+    let selectedItem = "";
+
+    // @ts-ignore
+    // function handleItemSelect(item) {
+    //     selectedItem = item;
+    // }
 </script>
 
 <div class="container">
@@ -18,7 +24,7 @@
         </div>
     {/if}
 </div>
-<NavBar bind:active />
+<NavBar bind:active {selectedItem} />
 
 <style>
     .container {
@@ -27,12 +33,11 @@
     }
     .startButtonContent {
         background-color: #bab8b8;
-        height: calc(30vh - 43px);
+        height: calc(40vh - 43px);
         bottom: 43px;
         left: 0vw;
         position: fixed;
-        z-index: 1000;
-        width: 13vw;
+        width: 20vw;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
