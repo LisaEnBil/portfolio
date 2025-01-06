@@ -4,11 +4,23 @@
     export let active = false;
     export let selectedItems;
 
+    export let buttonActive = false;
+
+    /**
+     * @type {null}
+     */
+    let activeItem = null;
+
     function handleClick() {
         active = !active;
     }
 
-    console.log("navbar", selectedItems);
+    /**
+     * @param {any} item
+     */
+    function handleActiveClick(item) {
+        activeItem = activeItem === item ? null : item;
+    }
 </script>
 
 <div class="navbar">
@@ -17,8 +29,10 @@
         {#if selectedItems}
             {#each selectedItems as item}
                 <div class="selectedItemBox">
-                    <Button on:click={handleClick} width="{'auto'}{active}"
-                        >{item}</Button
+                    <Button
+                        on:click={() => handleActiveClick(item)}
+                        width={"auto"}
+                        buttonActive={activeItem === item}>{item}</Button
                     >
                 </div>
             {/each}

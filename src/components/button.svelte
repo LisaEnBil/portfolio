@@ -1,10 +1,10 @@
 <script>
     export let active = false;
     export let width = "50px";
-    export let itemActive = false;
+    export let buttonActive = false;
 </script>
 
-<button on:click class:active style:width>
+<button on:click class:active class:buttonActive style:width>
     <slot></slot>
 </button>
 
@@ -27,6 +27,14 @@
         box-shadow: 1px 1px 1px rgb(21, 20, 20);
     }
     button.active {
+        background-color: #e7e3e3;
+        box-shadow: none;
+        border-left: 2px solid #5e5e5e;
+        border-top: 2px solid #505050;
+        border-right: 1px solid #eae9e9;
+        border-bottom: 1px solid #eae9e9;
+    }
+    button.buttonActive {
         background-color: #e7e3e3;
         box-shadow: none;
         border-left: 2px solid #5e5e5e;
