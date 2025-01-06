@@ -17,7 +17,9 @@
         {#if selectedItems}
             {#each selectedItems as item}
                 <div class="selectedItemBox">
-                    <Button on:click={handleClick} {active}>{item}</Button>
+                    <Button on:click={handleClick} width="{'auto'}{active}"
+                        >{item}</Button
+                    >
                 </div>
             {/each}
         {/if}

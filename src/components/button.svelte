@@ -24,7 +24,6 @@
         align-items: center;
         justify-content: center;
         height: 30px;
-        width: 50px;
         box-shadow: 1px 1px 1px rgb(21, 20, 20);
     }
     button.active {
