@@ -18,7 +18,7 @@
         cursor: pointer;
         font-family: "Segoe UI", sans-serif;
         font-weight: 500;
-        font-size: large;
+        font-size: medium;
         margin: 3px;
         display: flex;
         align-items: center;
