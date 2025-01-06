@@ -1,15 +1,10 @@
-<script>
+<script lang="ts">
     import Button from "../components/button.svelte";
 
     export let active = false;
     export let selectedItems;
 
-    export let buttonActive = false;
-
-    /**
-     * @type {null}
-     */
-    let activeItem = null;
+    export let activeItem: string | null = null;
 
     function handleClick() {
         active = !active;
@@ -18,8 +13,8 @@
     /**
      * @param {any} item
      */
-    function handleActiveClick(item) {
-        activeItem = activeItem === item ? null : item;
+    function handleActiveClick(item: string) {
+        const newActiveItem = activeItem === item ? null : item;
     }
 </script>
 

@@ -1,33 +1,32 @@
-<script>
+<script lang="ts">
     import StartMenu from "../components/startMenu.svelte";
     import pdfUrl from "$lib/assets/LG_CV.pdf";
     import NavBar from "../components/navbar.svelte";
 
     let active = false;
-    /**
-     * @type {string[]} item
-     */
-    let selectedItems = [];
 
-    // @ts-ignore
-    // function handleItemSelect(item) {
-    //     selectedItem = item;
-    // }
+    let selectedItems: string[] = [];
+
+    let activeItem: string | null = null;
 </script>
 
 <div class="container">
-    <div class="content">
-        <iframe src={pdfUrl} width="100%" height="600px" title="PDF Viewer"
-        ></iframe>
-    </div>
+    {#if activeItem}
+        <div class="content">
+            <p>{activeItem}</p>
+
+            <!-- <iframe src={pdfUrl} width="100%" height="600px" title="PDF Viewer"
+        ></iframe> -->
+        </div>
+    {/if}
 
     {#if active}
         <div class="startButtonContent">
-            <StartMenu bind:selectedItems />
+            <StartMenu bind:selectedItems bind:activeItem />
         </div>
     {/if}
 </div>
-<NavBar bind:active {selectedItems} />
+<NavBar bind:active bind:activeItem {selectedItems} />
 
 <style>
     .container {

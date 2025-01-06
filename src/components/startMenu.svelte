@@ -1,23 +1,20 @@
-<script>
+<script lang="ts">
     import logo from "$lib/assets/icons8-linkedin-48.png";
     import missingPiece from "$lib/assets/Component18.png";
     import fiffigaFrun from "$lib/assets/testIcon.png";
     import cheerMeApp from "$lib/assets/IMG_0045.jpg";
     import folder from "$lib/assets/folderFilled.png";
 
-    /**
-     * @type {string[]}
-     */
-    export let selectedItems = [];
+    export let selectedItems: string[] = [];
 
-    /**
-     * @param {string} item
-     */
-    function handleItemClick(item) {
+    export let activeItem: string | null = null;
+
+    function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
             const index = selectedItems.indexOf(item);
             if (index === -1) {
                 selectedItems = [...selectedItems, item];
+                activeItem = activeItem === item ? null : item;
             } else {
                 selectedItems = selectedItems.filter((i) => i !== item);
             }
@@ -40,7 +37,6 @@
         </a>
         <button
             on:click={() => {
-                console.log("Fiffiga Frun");
                 handleItemClick("Fiffiga Frun");
             }}
         >
@@ -57,7 +53,6 @@
         </button>
         <button
             on:click={() => {
-                console.log("CheerMeApp");
                 handleItemClick("CheerMeApp");
             }}
         >
@@ -75,7 +70,6 @@
         <button
             class="bottom-image"
             on:click={() => {
-                console.log("Missing Piece");
                 handleItemClick("Missing Piece");
             }}
             ><div class="rowContent">
@@ -91,7 +85,6 @@
         </button>
         <button
             on:click={() => {
-                console.log("Resume");
                 handleItemClick("Resume");
             }}
             ><div class="rowContent">
