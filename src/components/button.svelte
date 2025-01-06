@@ -1,8 +1,10 @@
 <script>
     export let active = false;
+    export let width = "50px";
+    export let itemActive = false;
 </script>
 
-<button on:click class:active>
+<button on:click class:active style:width>
     <slot></slot>
 </button>
 
