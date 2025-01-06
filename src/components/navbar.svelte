@@ -10,11 +10,8 @@
         active = !active;
     }
 
-    /**
-     * @param {any} item
-     */
     function handleActiveClick(item: string) {
-        const newActiveItem = activeItem === item ? null : item;
+        activeItem = activeItem === item ? null : item;
     }
 </script>
 

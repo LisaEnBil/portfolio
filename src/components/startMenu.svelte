@@ -15,8 +15,6 @@
             if (index === -1) {
                 selectedItems = [...selectedItems, item];
                 activeItem = activeItem === item ? null : item;
-            } else {
-                selectedItems = selectedItems.filter((i) => i !== item);
             }
             const event = new CustomEvent("itemSelect", {
                 detail: selectedItems,
