@@ -5,24 +5,25 @@
     import cheerMeApp from "$lib/assets/IMG_0045.jpg";
     import folder from "$lib/assets/folderFilled.png";
 
-    export let selectedItem = "";
-    $: selectedItem = "";
-    // // @ts-ignore
-    // function handleItemClick(item) {
-    //     if (item !== "LinkedIn") {
-    //         selectedItem = item;
-    //     }
-    // }
+    /**
+     * @type {string[]}
+     */
+    export let selectedItems = [];
 
     /**
      * @param {string} item
      */
     function handleItemClick(item) {
-        console.log("Clicked item:", item);
         if (item !== "LinkedIn") {
-            selectedItem = item;
-            console.log("Selected item updated:", selectedItem);
-            const event = new CustomEvent("itemSelect", { detail: item });
+            const index = selectedItems.indexOf(item);
+            if (index === -1) {
+                selectedItems = [...selectedItems, item];
+            } else {
+                selectedItems = selectedItems.filter((i) => i !== item);
+            }
+            const event = new CustomEvent("itemSelect", {
+                detail: selectedItems,
+            });
             dispatchEvent(event);
         }
     }

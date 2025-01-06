@@ -4,7 +4,10 @@
     import NavBar from "../components/navbar.svelte";
 
     let active = false;
-    let selectedItem = "";
+    /**
+     * @type {string[]} item
+     */
+    let selectedItems = [];
 
     // @ts-ignore
     // function handleItemSelect(item) {
@@ -20,11 +23,11 @@
 
     {#if active}
         <div class="startButtonContent">
-            <StartMenu />
+            <StartMenu bind:selectedItems />
         </div>
     {/if}
 </div>
-<NavBar bind:active {selectedItem} />
+<NavBar bind:active {selectedItems} />
 
 <style>
     .container {
