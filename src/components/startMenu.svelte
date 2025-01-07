@@ -35,7 +35,7 @@
         </a>
         <button
             on:click={() => {
-                handleItemClick("Fiffiga Frun");
+                handleItemClick("FiffigaFrun");
             }}
         >
             <div class="rowContent">
@@ -68,7 +68,7 @@
         <button
             class="bottom-image"
             on:click={() => {
-                handleItemClick("Missing Piece");
+                handleItemClick("MissingPiece");
             }}
             ><div class="rowContent">
                 <img
@@ -92,26 +92,6 @@
         </button>
     </div>
 </div>
-
-<!-- {#each ["Missing Piece", "Fiffiga Frun", "CheerMeApp"] as item}
-<button on:click={() => handleItemClick(item)}>
-    
-    <div class="rowContent">
-        <img
-            width="38"
-            height="38"
-            class="bottom-image"
-            alt="{item} Icon"
-            src={item === "Missing Piece"
-                ? missingPiece
-                : item === "Fiffiga Frun"
-                  ? fiffigaFrun
-                  : cheerMeApp}
-        />
-        <p>{item}</p>
-    </div>
-</button>
-{/each} -->
 
 <style>
     .image-margin {
