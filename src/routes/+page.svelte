@@ -6,13 +6,30 @@
     import CheerMeApp from "../components/app_info/cheermeapp.svelte";
     import NavBar from "../components/navbar.svelte";
     import InfoHeader from "../components/infoHeader.svelte";
+    import { onMount } from "svelte";
+    import StartMenuButtons from "../components/startMenuButtons.svelte";
 
     let active = false;
     let selectedItems: string[] = [];
     let activeItem: string | null = null;
+
+    let screenWidth: number;
+
+    onMount(() => {
+        screenWidth = window.innerWidth;
+        window.addEventListener("resize", () => {
+            screenWidth = window.innerWidth;
+        });
+    });
+
+    $: isMobile = screenWidth <= 1000;
 </script>
 
 <div class="container">
+    {#if isMobile}
+        <StartMenuButtons bind:selectedItems bind:activeItem />
+    {/if}
+
     {#if activeItem}
         <div class="content">
             <InfoHeader bind:selectedItems bind:activeItem />
@@ -28,13 +45,15 @@
         </div>
     {/if}
 
-    {#if active}
+    {#if !isMobile && active}
         <div class="startButtonContent">
             <StartMenu bind:selectedItems bind:activeItem />
         </div>
     {/if}
 </div>
-<NavBar bind:active bind:activeItem {selectedItems} />
+{#if !isMobile}
+    <NavBar bind:active bind:activeItem {selectedItems} />
+{/if}
 
 <style>
     .container {
@@ -64,5 +83,16 @@
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
+    }
+    @media screen and (max-width: 999px) {
+        .container {
+            display: flex;
+            align-items: start;
+            flex-direction: row;
+            overflow-y: scroll;
+        }
+        .content {
+            height: auto;
+        }
     }
 </style>

@@ -16,12 +16,12 @@
 
             <p>
                 Developed in Kotlin, leveraging modern Android development
-                practices Utilized Jetpack Compose for building the user
-                interface, ensuring a fluid and interactive experience
+                practices. Utilized Jetpack Compose for building the user
+                interface, ensuring a fluid and interactive experience.
                 Implemented Room database for efficient local data storage of
-                high scores User interface designed in Figma for a polished and
-                intuitive look Version control managed through Git and GitHub
-                for streamlined development
+                high scores. User interface designed in Figma for a polished and
+                intuitive look. Version control managed through Git and GitHub
+                for streamlined development.
             </p>
         </div>
 

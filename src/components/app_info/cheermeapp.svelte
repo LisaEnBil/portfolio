@@ -45,7 +45,7 @@
 
 <style>
     .container {
-        height: 100%;
+        height: auto;
         width: 85%;
         align-items: flex-start;
     }
@@ -54,11 +54,6 @@
         flex-direction: row;
     }
     .column-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .technical {
         display: flex;
         flex-direction: column;
     }

@@ -104,7 +104,6 @@
         border: 0.5px solid #656363;
         display: flex;
         flex-direction: row;
-        width: 100%;
         height: 100vh;
     }
     .graySpace {
@@ -143,6 +142,7 @@
         border: none;
         margin-bottom: 5px;
         justify-content: center;
+        width: 100%;
     }
     /* #010649 */
     p {
