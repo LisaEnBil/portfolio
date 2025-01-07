@@ -1,4 +1,5 @@
 <script>
+    import cheerMeApp from "$lib/assets/cheerMeApp.png";
 </script>
 
 <div class="container">
@@ -11,22 +12,35 @@
         haptic feedback to simulate the sensation of a cat's vibration, creating
         a multi-sensory experience .
     </p>
-    <h2>Personalized Cat Library</h2>
-    <p>
-        CheerMeApp allows users to add their own cats to the app's library. This
-        feature enables pet owners to:
-    </p>
-    <li>Choose an existing photo or take a new one of their cat.</li>
-    <li>Record their cat's unique purring sound.</li>
-    <li>Bring their beloved virtual cat on vacations.</li>
-    <h2>Technical Highlights</h2>
-    <p>
-        Developed using SwiftUI, leveraging the latest iOS features. Implemented
-        Firebase Authentication for secure user access. Utilized Firebase
-        Storage for efficient media management. Employed Firebase Database for
-        robust data handling. Designed user interface with Figma for a polished
-        look. Version control managed through Git and GitHub
-    </p>
+    <div class="content">
+        <div class="column-content">
+            <h2>Personalized Cat Library</h2>
+            <p>
+                CheerMeApp allows users to add their own cats to the app's
+                library. This feature enables pet owners to:
+            </p>
+            <li>Choose an existing photo or take a new one of their cat.</li>
+            <li>Record their cat's unique purring sound.</li>
+            <li>Bring their beloved virtual cat on vacations.</li>
+
+            <h2>Technical Highlights</h2>
+            <p>
+                Developed using SwiftUI, leveraging the latest iOS features.
+                Implemented Firebase Authentication for secure user access.
+                Utilized Firebase Storage for efficient media management.
+                Employed Firebase Database for robust data handling. Designed
+                user interface with Figma for a polished look. Version control
+                managed through Git and GitHub
+            </p>
+        </div>
+        <img
+            width="150"
+            height="300"
+            class="image-margin rounded-corners"
+            alt="Missing Piece screen shot"
+            src={cheerMeApp}
+        />
+    </div>
 </div>
 
 <style>
@@ -34,6 +48,19 @@
         height: 100%;
         width: 85%;
         align-items: flex-start;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+    }
+    .column-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technical {
+        display: flex;
+        flex-direction: column;
     }
     h1 {
         font-family: "Segoe UI", sans-serif;

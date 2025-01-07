@@ -1,4 +1,5 @@
 <script>
+    import fiffigaFrun from "$lib/assets/fiffigaFrunScreenShot.png";
 </script>
 
 <div class="container">
@@ -11,31 +12,44 @@
         with TypeScript, this app provides a seamless and efficient user
         experience.
     </p>
-    <h2>Key Features</h2>
+    <div class="content">
+        <div class="technical">
+            <h2>Key Features</h2>
 
-    <li>
-        Extensive Database: Houses several hundred tips covering various aspects
-        of daily life.
-    </li>
-    <li>
-        Smart Search: Users can easily find specific tips using the search
-        functionality.
-    </li>
-    <li>
-        Category Filtering: Tips are organized into categories for quick access.
-    </li>
-    <li>
-        User Contributions: Allows users to email their own tips, fostering
-        community engagement.
-    </li>
-    <h2>Technical Highlights</h2>
-    <p>
-        Built with React Native and TypeScript for robust, type-safe
-        development. User interface designed in Figma for a polished and
-        intuitive look. Integrated Google AdMob for in-app advertising.
-        Implemented RevenueCat for efficient management of paywalls and in-app
-        purchases.
-    </p>
+            <li>
+                Extensive Database: Houses several hundred tips covering various
+                aspects of daily life.
+            </li>
+            <li>
+                Smart Search: Users can easily find specific tips using the
+                search functionality.
+            </li>
+            <li>
+                Category Filtering: Tips are organized into categories for quick
+                access.
+            </li>
+            <li>
+                User Contributions: Allows users to email their own tips,
+                fostering community engagement.
+            </li>
+            <h2>Technical Highlights</h2>
+            <p>
+                Built with React Native and TypeScript for robust, type-safe
+                development. User interface designed in Figma for a polished and
+                intuitive look. Integrated Google AdMob for in-app advertising.
+                Implemented RevenueCat for efficient management of paywalls and
+                in-app purchases.
+            </p>
+        </div>
+
+        <img
+            width="150"
+            height="300"
+            class="image-margin rounded-corners"
+            alt="Missing Piece screen shot"
+            src={fiffigaFrun}
+        />
+    </div>
 </div>
 
 <style>
@@ -44,6 +58,16 @@
         width: 85%;
         align-items: flex-start;
     }
+    .content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .technical {
+        display: flex;
+        flex-direction: column;
+    }
+
     h1 {
         font-family: "Segoe UI", sans-serif;
         font-weight: 500;
