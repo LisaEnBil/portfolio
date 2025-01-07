@@ -35,7 +35,7 @@
         </a>
         <button
             on:click={() => {
-                handleItemClick("FiffigaFrun");
+                handleItemClick("Fiffiga Frun");
             }}
         >
             <div class="rowContent">
@@ -68,7 +68,7 @@
         <button
             class="bottom-image"
             on:click={() => {
-                handleItemClick("MissingPiece");
+                handleItemClick("Missing Piece");
             }}
             ><div class="rowContent">
                 <img
