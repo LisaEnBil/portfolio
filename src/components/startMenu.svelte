@@ -29,7 +29,7 @@
     <div class="menuList">
         <a href="https://www.linkedin.com/in/lisa-gillfrost/">
             <div class="rowContent">
-                <img width="50" height="50" alt="LinkedIn Icon" src={logo} />
+                <img width="48" height="48" alt="LinkedIn Icon" src={logo} />
                 <p>LinkedIn</p>
             </div>
         </a>
@@ -46,7 +46,7 @@
                     alt="Fiffiga Frun App Icon"
                     src={fiffigaFrun}
                 />
-                <p>Fiffiga Frun</p>
+                <p class="text-margin">Fiffiga Frun</p>
             </div>
         </button>
         <button
@@ -62,7 +62,7 @@
                     alt="Cheer Me App Icon"
                     src={cheerMeApp}
                 />
-                <p>CheerMeApp</p>
+                <p class="text-margin">CheerMeApp</p>
             </div>
         </button>
         <button
@@ -78,7 +78,7 @@
                     alt="Missing Piece Icon"
                     src={missingPiece}
                 />
-                <p>Missing Piece</p>
+                <p class="text-margin">Missing Piece</p>
             </div>
         </button>
         <button
@@ -94,6 +94,9 @@
 </div>
 
 <style>
+    .text-margin {
+        margin-left: 15px;
+    }
     .image-margin {
         margin-left: 5px;
     }
