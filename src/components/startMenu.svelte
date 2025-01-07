@@ -9,6 +9,12 @@
 
     export let activeItem: string | null = null;
 
+    const menuItems = [
+        { name: "Fiffiga Frun", icon: fiffigaFrun },
+        { name: "CheerMeApp", icon: cheerMeApp },
+        { name: "Missing Piece", icon: missingPiece },
+    ];
+
     function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
             const index = selectedItems.indexOf(item);
@@ -33,54 +39,24 @@
                 <p>LinkedIn</p>
             </div>
         </a>
-        <button
-            on:click={() => {
-                handleItemClick("Fiffiga Frun");
-            }}
-        >
-            <div class="rowContent">
-                <img
-                    width="35"
-                    height="35"
-                    class="image-margin rounded-corners"
-                    alt="Fiffiga Frun App Icon"
-                    src={fiffigaFrun}
-                />
-                <p class="text-margin">Fiffiga Frun</p>
-            </div>
-        </button>
-        <button
-            on:click={() => {
-                handleItemClick("CheerMeApp");
-            }}
-        >
-            <div class="rowContent">
-                <img
-                    width="35"
-                    height="35"
-                    class="image-margin rounded-corners"
-                    alt="Cheer Me App Icon"
-                    src={cheerMeApp}
-                />
-                <p class="text-margin">CheerMeApp</p>
-            </div>
-        </button>
-        <button
-            class="bottom-image"
-            on:click={() => {
-                handleItemClick("Missing Piece");
-            }}
-            ><div class="rowContent">
-                <img
-                    class="image-margin"
-                    width="35"
-                    height="35"
-                    alt="Missing Piece Icon"
-                    src={missingPiece}
-                />
-                <p class="text-margin">Missing Piece</p>
-            </div>
-        </button>
+        {#each menuItems as item}
+            <button
+                on:click={() => {
+                    handleItemClick(item.name);
+                }}
+            >
+                <div class="rowContent">
+                    <img
+                        width="35"
+                        height="35"
+                        class="image-margin rounded-corners"
+                        alt="Fiffiga Frun App Icon"
+                        src={item.icon}
+                    />
+                    <p class="text-margin">{item.name}</p>
+                </div>
+            </button>
+        {/each}
         <button
             on:click={() => {
                 handleItemClick("Resume");
