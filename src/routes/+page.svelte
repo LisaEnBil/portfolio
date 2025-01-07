@@ -5,6 +5,7 @@
     import MissingPiece from "../components/app_info/missingPiece.svelte";
     import CheerMeApp from "../components/app_info/cheermeapp.svelte";
     import NavBar from "../components/navbar.svelte";
+    import InfoHeader from "../components/infoHeader.svelte";
 
     let active = false;
     let selectedItems: string[] = [];
@@ -14,7 +15,7 @@
 <div class="container">
     {#if activeItem}
         <div class="content">
-            <div class="header"><p>{activeItem}</p></div>
+            <InfoHeader bind:selectedItems bind:activeItem />
             {#if activeItem === "Fiffiga Frun"}
                 <Fiffigafrun />
             {:else if activeItem === "Resume"}
@@ -63,20 +64,5 @@
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
-    }
-    .header {
-        height: 20px;
-        background-color: #787878;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-    p {
-        font-family: "Segoe UI", sans-serif;
-        color: #ffffff;
-        font-weight: 100;
-        margin: 0;
-        padding-left: 5px;
-        font-size: smaller;
     }
 </style>

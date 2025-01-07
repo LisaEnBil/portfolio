@@ -58,8 +58,9 @@
         font-weight: 300;
     }
     li {
+        margin-top: 10px;
         font-family: "Segoe UI", sans-serif;
-        font-weight: 500;
+        font-weight: 200;
     }
 
     p {
