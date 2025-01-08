@@ -75,6 +75,9 @@
         font-family: "Segoe UI", sans-serif;
         font-weight: 200;
     }
+    img {
+        padding-left: 5px;
+    }
 
     p {
         font-family: "Segoe UI", sans-serif;

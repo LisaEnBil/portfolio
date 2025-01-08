@@ -50,6 +50,9 @@
         display: flex;
         flex-direction: column;
     }
+    img {
+        padding-left: 5px;
+    }
 
     h1 {
         font-family: "Segoe UI", sans-serif;
