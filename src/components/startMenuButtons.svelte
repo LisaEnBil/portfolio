@@ -11,8 +11,6 @@
 
     function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
-            const index = selectedItems.indexOf(item);
-
             activeItem = activeItem === item ? null : item;
             const event = new CustomEvent("itemSelect", {
                 detail: selectedItems,
