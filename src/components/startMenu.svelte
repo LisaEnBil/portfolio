@@ -31,7 +31,7 @@
 </script>
 
 <div class="menu">
-    <div class="graySpace"><p>""</p></div>
+    <div class="graySpace"></div>
     <div class="menuList">
         <a href="https://www.linkedin.com/in/lisa-gillfrost/">
             <div class="rowContent">
@@ -85,6 +85,7 @@
         flex-direction: row;
         height: 100vh;
     }
+
     .graySpace {
         display: flex;
         background-color: #797777;
