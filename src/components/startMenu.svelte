@@ -6,7 +6,7 @@
     import folder from "$lib/assets/folderFilled.png";
 
     export let selectedItems: string[] = [];
-
+    export let active = false;
     export let activeItem: string | null = null;
 
     const menuItems = [
@@ -18,6 +18,7 @@
     function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
             const index = selectedItems.indexOf(item);
+            active = false;
             if (index === -1) {
                 selectedItems = [...selectedItems, item];
                 activeItem = activeItem === item ? null : item;

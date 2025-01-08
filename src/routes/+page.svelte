@@ -47,7 +47,7 @@
 
     {#if !isMobile && active}
         <div class="startButtonContent">
-            <StartMenu bind:selectedItems bind:activeItem />
+            <StartMenu bind:selectedItems bind:activeItem bind:active />
         </div>
     {/if}
 </div>
