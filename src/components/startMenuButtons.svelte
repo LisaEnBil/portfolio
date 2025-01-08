@@ -12,10 +12,8 @@
     function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
             const index = selectedItems.indexOf(item);
-            if (index === -1) {
-                selectedItems = [...selectedItems, item];
-                activeItem = activeItem === item ? null : item;
-            }
+
+            activeItem = activeItem === item ? null : item;
             const event = new CustomEvent("itemSelect", {
                 detail: selectedItems,
             });
@@ -95,6 +93,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: auto;
     }
     .menuList a {
         text-decoration: none;
@@ -112,6 +111,7 @@
     @media screen and (max-width: 999px) {
         button {
             background-color: #bab8b800;
+            color: #000000;
         }
         a {
             display: flex;
@@ -137,5 +137,6 @@
         font-size: small;
         margin: 0;
         margin-left: 10px;
+        color: #000000;
     }
 </style>

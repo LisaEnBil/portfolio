@@ -93,6 +93,7 @@
         }
         .content {
             height: auto;
+            width: auto;
         }
     }
 </style>
