@@ -10,7 +10,7 @@
         Interactive Cat Scratching: Users can scratch a virtual cat on their
         device screen, triggering a realistic purring sound. The app utilizes
         haptic feedback to simulate the sensation of a cat's vibration, creating
-        a multi-sensory experience .
+        a multi-sensory experience.
     </p>
     <div class="content">
         <div class="column-content">
@@ -76,6 +76,7 @@
         font-weight: 200;
     }
     img {
+        padding-top: 5px;
         padding-left: 5px;
     }
 
