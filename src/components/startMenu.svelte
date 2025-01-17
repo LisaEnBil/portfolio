@@ -90,13 +90,13 @@
     .graySpace {
         display: flex;
         background-color: #797777;
-        width: 20%;
-        height: 100%;
+        min-width: 20%;
     }
     .menuList {
         display: flex;
         flex-direction: column;
         height: 100%;
+        width: 80%;
     }
     .rowContent {
         display: flex;
@@ -118,12 +118,12 @@
     .menuList p::first-letter {
         text-decoration: underline;
     }
+
     button {
         background-color: #bab8b8;
         border: none;
         margin-bottom: 5px;
         justify-content: center;
-        width: 100%;
     }
     /* #010649 */
     p {

@@ -8,6 +8,7 @@
     export let selectedItems: string[] = [];
 
     export let activeItem: string | null = null;
+    export let closeMenu: () => void;
 
     function handleItemClick(item: string) {
         if (item !== "LinkedIn") {
@@ -16,6 +17,7 @@
                 detail: selectedItems,
             });
             dispatchEvent(event);
+            closeMenu();
         }
     }
 </script>
@@ -88,10 +90,7 @@
     .menuList {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         height: 100%;
-        width: auto;
     }
     .menuList a {
         text-decoration: none;
@@ -106,7 +105,7 @@
     .menuList p::first-letter {
         text-decoration: underline;
     }
-    @media screen and (max-width: 999px) {
+    @media screen and (max-width: 750px) {
         button {
             background-color: #bab8b800;
             color: #000000;

@@ -8,12 +8,19 @@
     import InfoHeader from "../components/infoHeader.svelte";
     import { onMount } from "svelte";
     import StartMenuButtons from "../components/startMenuButtons.svelte";
+    import HamburgerMenu from "../components/hamburgerMenu.svelte";
 
     let active = false;
     let selectedItems: string[] = [];
     let activeItem: string | null = null;
 
+    let buttonMenuActive = false;
+
     let screenWidth: number;
+
+    function toggleMenu() {
+        buttonMenuActive = !buttonMenuActive;
+    }
 
     onMount(() => {
         screenWidth = window.innerWidth;
@@ -22,12 +29,23 @@
         });
     });
 
-    $: isMobile = screenWidth <= 1000;
+    $: isMobile = screenWidth <= 750;
 </script>
 
 <div class="container">
     {#if isMobile}
-        <StartMenuButtons bind:selectedItems bind:activeItem />
+        <div class="hamburger-menu">
+            <HamburgerMenu onClick={toggleMenu} />
+        </div>
+    {/if}
+    {#if isMobile && buttonMenuActive}
+        <div class="stuff">
+            <StartMenuButtons
+                bind:selectedItems
+                bind:activeItem
+                closeMenu={() => (buttonMenuActive = false)}
+            />
+        </div>
     {/if}
 
     {#if activeItem}
@@ -56,9 +74,17 @@
 {/if}
 
 <style>
-    .container {
-        width: 99vw;
-        height: 94vh;
+    .hamburger-menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+    }
+    .stuff {
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        z-index: 1001;
     }
     .startButtonContent {
         background-color: #bab8b8;
@@ -66,7 +92,7 @@
         bottom: 43px;
         left: 0vw;
         position: fixed;
-        width: 15vw;
+        width: fit-content;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
@@ -76,24 +102,25 @@
         display: flex;
         flex-direction: column;
         background-color: #bab8b8;
-        height: 75vh;
+        height: auto;
         width: 60vw;
         align-items: center;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
+        margin-top: 60px;
     }
-    @media screen and (max-width: 999px) {
+    @media screen and (max-width: 750px) {
         .container {
             display: flex;
-            align-items: start;
-            flex-direction: row;
+            flex-direction: column;
             overflow-y: scroll;
         }
         .content {
             height: auto;
             width: auto;
+            margin-top: 60px;
         }
     }
 </style>

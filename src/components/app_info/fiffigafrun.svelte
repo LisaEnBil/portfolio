@@ -66,6 +66,7 @@
     .technical {
         display: flex;
         flex-direction: column;
+        padding-bottom: 10px;
     }
     img {
         padding-top: 5px;

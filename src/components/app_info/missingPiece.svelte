@@ -49,6 +49,7 @@
     .technical {
         display: flex;
         flex-direction: column;
+        padding-bottom: 10;
     }
     img {
         padding-top: 5px;

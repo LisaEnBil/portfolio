@@ -56,6 +56,7 @@
     .column-content {
         display: flex;
         flex-direction: column;
+        padding-bottom: 10;
     }
     h1 {
         font-family: "Segoe UI", sans-serif;
@@ -78,6 +79,7 @@
     img {
         padding-top: 5px;
         padding-left: 5px;
+        padding-right: 10px;
     }
 
     p {
@@ -86,5 +88,10 @@
         font-size: large;
         margin: 0;
         margin-left: 10px;
+    }
+    @media screen and (max-width: 750px) {
+        .container {
+            width: auto;
+        }
     }
 </style>
