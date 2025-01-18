@@ -77,13 +77,13 @@
     .hamburger-menu {
         position: fixed;
         top: 10px;
-        right: 10px;
+        left: 10px;
         z-index: 1001;
     }
     .stuff {
         position: fixed;
         top: 50px;
-        right: 10px;
+        left: 10px;
         z-index: 1001;
     }
     .startButtonContent {

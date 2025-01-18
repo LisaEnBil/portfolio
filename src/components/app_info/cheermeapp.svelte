@@ -30,7 +30,7 @@
                 Utilized Firebase Storage for efficient media management.
                 Employed Firebase Database for robust data handling. Designed
                 user interface with Figma for a polished look. Version control
-                managed through Git and GitHub
+                managed through Git and GitHub.
             </p>
         </div>
         <img

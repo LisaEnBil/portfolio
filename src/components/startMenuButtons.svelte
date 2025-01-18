@@ -91,15 +91,16 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        background-color: #2b2828c2;
     }
     .menuList a {
         text-decoration: none;
-        color: inherit;
+        color: #ffffff;
         margin: 5px;
     }
 
     .menuList a:visited {
-        color: inherit;
+        color: #ffffff;
     }
 
     .menuList p::first-letter {
@@ -134,6 +135,6 @@
         font-size: small;
         margin: 0;
         margin-left: 10px;
-        color: #000000;
+        color: #ffffff;
     }
 </style>
