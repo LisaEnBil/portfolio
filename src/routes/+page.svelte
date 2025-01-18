@@ -98,18 +98,22 @@
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
     }
+    .container {
+        height: 100vh;
+    }
     .content {
         display: flex;
         flex-direction: column;
         background-color: #bab8b8;
-        height: auto;
         width: 60vw;
+        padding-bottom: 10px;
         align-items: center;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
         margin-top: 60px;
+        overflow-y: scroll;
     }
     @media screen and (max-width: 750px) {
         .container {
@@ -121,6 +125,7 @@
             height: auto;
             width: auto;
             margin-top: 60px;
+            overflow-y: scroll;
         }
     }
 </style>

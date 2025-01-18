@@ -3,7 +3,7 @@
 </script>
 
 <div class="container">
-    <h1>Fiffiga Frun: Your Ultimate Life Hack Companion</h1>
+    <h1>Fiffiga Frun: Your Roadmap for Living Smarter</h1>
     <h3>iOS, React Native</h3>
     <p>
         Fiffiga Frun is a comprehensive mobile application that offers users
