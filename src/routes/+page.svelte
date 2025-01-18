@@ -114,18 +114,21 @@
         border-bottom: 2px solid #656363;
         margin-top: 60px;
         overflow-y: scroll;
+        overscroll-behavior: none;
     }
     @media screen and (max-width: 750px) {
         .container {
             display: flex;
             flex-direction: column;
             overflow-y: scroll;
+            overscroll-behavior: none;
         }
         .content {
             height: auto;
             width: auto;
             margin-top: 60px;
             overflow-y: scroll;
+            overscroll-behavior: none;
         }
     }
 </style>
