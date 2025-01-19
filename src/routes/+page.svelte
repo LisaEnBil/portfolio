@@ -115,7 +115,7 @@
         margin-top: 60px;
         overflow-y: scroll;
     }
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 46.875em) {
         .container {
             display: flex;
             flex-direction: column;

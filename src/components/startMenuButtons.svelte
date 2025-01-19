@@ -106,7 +106,7 @@
     .menuList p::first-letter {
         text-decoration: underline;
     }
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 46.875em) {
         button {
             background-color: #bab8b800;
             color: #000000;
