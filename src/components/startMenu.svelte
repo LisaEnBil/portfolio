@@ -5,9 +5,9 @@
     import cheerMeApp from "$lib/assets/IMG_0045.jpg";
     import folder from "$lib/assets/folderFilled.png";
 
-    export let selectedItems: string[] = [];
+    export let selectedItems: string[] = ["Welcome"];
     export let active = false;
-    export let activeItem: string | null = null;
+    export let activeItem: string = "Welcome";
 
     const menuItems = [
         { name: "Fiffiga Frun", icon: fiffigaFrun },
@@ -21,7 +21,7 @@
             active = false;
             if (index === -1) {
                 selectedItems = [...selectedItems, item];
-                activeItem = activeItem === item ? null : item;
+                activeItem = activeItem === item ? "Welcome" : item;
             }
             const event = new CustomEvent("itemSelect", {
                 detail: selectedItems,

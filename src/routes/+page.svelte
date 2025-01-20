@@ -9,10 +9,11 @@
     import { onMount } from "svelte";
     import StartMenuButtons from "../components/startMenuButtons.svelte";
     import HamburgerMenu from "../components/hamburgerMenu.svelte";
+    import WelcomeMessage from "../components/app_info/welcomeMessage.svelte";
 
     let active = false;
-    let selectedItems: string[] = [];
-    let activeItem: string | null = null;
+    let selectedItems: string[] = ["Welcome"];
+    let activeItem: string = "Welcome";
 
     let buttonMenuActive = false;
 
@@ -59,6 +60,8 @@
                 <MissingPiece />
             {:else if activeItem === "CheerMeApp"}
                 <CheerMeApp />
+            {:else}
+                <WelcomeMessage />
             {/if}
         </div>
     {/if}

@@ -4,14 +4,14 @@
     export let active = false;
     export let selectedItems;
 
-    export let activeItem: string | null = null;
+    export let activeItem: string = "Welcome";
 
     function handleClick() {
         active = !active;
     }
 
     function handleActiveClick(item: string) {
-        activeItem = activeItem === item ? null : item;
+        activeItem = activeItem === item ? "Welcome" : item;
     }
 </script>
 
