@@ -91,7 +91,7 @@
     }
     .startButtonContent {
         background-color: #bab8b8;
-        height: calc(40vh - 43px);
+
         bottom: 43px;
         left: 0vw;
         position: fixed;
