@@ -18,7 +18,7 @@
             width="15"
             height="15"
             class="image-margin rounded-corners"
-            alt="Fiffiga Frun App Icon"
+            alt="Close content"
             src={closeIcon}
         />
     </button>
