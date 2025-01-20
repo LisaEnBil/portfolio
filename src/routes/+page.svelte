@@ -100,6 +100,7 @@
     }
     .container {
         height: 100vh;
+        overflow-y: scroll;
     }
     .content {
         display: flex;
@@ -113,7 +114,6 @@
         border-right: 2px solid #656363;
         border-bottom: 2px solid #656363;
         margin-top: 60px;
-        overflow-y: scroll;
     }
     @media screen and (max-width: 46.875em) {
         .container {
@@ -125,7 +125,6 @@
             height: auto;
             width: auto;
             margin-top: 60px;
-            overflow-y: scroll;
         }
     }
 </style>
