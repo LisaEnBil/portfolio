@@ -28,7 +28,7 @@
 <style>
     .header {
         height: 30px;
-        background-color: #787878;
+        background-color: #00007b;
         width: 100%;
         display: flex;
         align-items: center;
