@@ -55,8 +55,11 @@
 <style>
     .container {
         height: 100%;
-        width: 85%;
+        width: 60vw;
         align-items: flex-start;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
     }
     .content {
         display: flex;

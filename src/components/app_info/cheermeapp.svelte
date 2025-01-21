@@ -46,7 +46,10 @@
 <style>
     .container {
         height: auto;
-        width: 85%;
+        width: 60vw;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
         align-items: flex-start;
     }
     .content {
