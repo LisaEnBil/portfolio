@@ -61,7 +61,7 @@
             {:else if activeItem === "CheerMeApp"}
                 <CheerMeApp />
             {:else}
-                <WelcomeMessage />
+                <WelcomeMessage bind:selectedItems bind:activeItem />
             {/if}
         </div>
     {/if}
@@ -91,7 +91,6 @@
     }
     .startButtonContent {
         background-color: #bab8b8;
-
         bottom: 43px;
         left: 0vw;
         position: fixed;
@@ -106,12 +105,7 @@
         overflow-y: scroll;
     }
     .content {
-        display: flex;
-        flex-direction: column;
         background-color: #bab8b8;
-        width: 60vw;
-        padding-bottom: 10px;
-        align-items: center;
         border-left: 2px solid #eae9e9;
         border-top: 2px solid #eae9e9;
         border-right: 2px solid #656363;
