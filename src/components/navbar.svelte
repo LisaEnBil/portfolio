@@ -23,9 +23,11 @@
                 <div class="selectedItemBox">
                     <Button
                         on:click={() => handleActiveClick(item)}
-                        width={"auto"}
-                        buttonActive={activeItem === item}>{item}</Button
+                        width={150}
+                        buttonActive={activeItem === item}
                     >
+                        {item}
+                    </Button>
                 </div>
             {/each}
         {/if}
@@ -53,12 +55,7 @@
         display: flex;
         flex-direction: row;
     }
-    .navbarStart {
-        border-top: 2px solid #ded8d8;
-        background-color: #bab8b8;
-        height: 40px;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
+    .selectedItemBox {
+        padding-left: 0.3em;
     }
 </style>

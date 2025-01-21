@@ -1,30 +1,28 @@
-<script>
+<script lang="ts">
     export let active = false;
-    export let width = "50px";
+    export let width: number | string = 50;
     export let buttonActive = false;
 </script>
 
-<button on:click class:active class:buttonActive style:width>
+<button on:click class:active class:buttonActive style:width={`${width}px`}>
     <slot></slot>
 </button>
 
 <style>
     button {
-        padding: 0.5rem 1rem;
         border-left: 1px solid #eae9e9;
         border-top: 1px solid #eae9e9;
         border-right: 1px solid #333232;
         border-bottom: 1px solid #333232;
         cursor: pointer;
         font-family: "Segoe UI", sans-serif;
-        font-weight: 500;
+        font-weight: 700;
         font-size: medium;
-        margin: 3px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 30px;
+        height: 35px;
         box-shadow: 1px 1px 1px rgb(21, 20, 20);
+        padding: 0;
     }
     button.active {
         background-color: #e7e3e3;
