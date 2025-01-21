@@ -18,10 +18,10 @@
 
     <div class="text-content">
         <p>
-            Every line of code tells a story. Browse through my curated
-            collection of projects, each representing a challenge solved, a
-            problem innovated, and a skill mastered. Your journey begins with a
-            click on the start menu.
+            <b>Did you know...</b><br /><br /><br />
+            Every line of code tells a story. Browse through my curated collection
+            of projects, each representing a challenge solved, a problem innovated,
+            and a skill mastered. Your journey begins with a click on the start menu.
         </p>
     </div>
     <div class="bottom">
@@ -68,6 +68,7 @@
     }
     .text-content {
         display: flex;
+        flex-direction: column;
         background-color: #d2d2a9;
         border-left: 2px solid #656363;
         border-top: 2px solid #656363;
@@ -100,5 +101,16 @@
         margin: 0;
         margin-left: 30px;
         margin-right: 30px;
+    }
+    @media screen and (max-width: 46.875em) {
+        .container {
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+        .text-content {
+            display: flex;
+            flex-direction: column;
+        }
     }
 </style>
