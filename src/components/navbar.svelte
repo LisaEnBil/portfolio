@@ -17,7 +17,9 @@
 
 <div class="navbar">
     <div class="navbarContainer">
-        <Button on:click={handleClick} {active}>Start</Button>
+        <Button on:click={handleClick} {active}
+            ><div class="selectedItemBox">Start</div></Button
+        >
         {#if selectedItems}
             {#each selectedItems as item}
                 <div class="selectedItemBox">
@@ -26,7 +28,7 @@
                         width={150}
                         buttonActive={activeItem === item}
                     >
-                        {item}
+                        <div class="selectedItemBox">{item}</div>
                     </Button>
                 </div>
             {/each}
