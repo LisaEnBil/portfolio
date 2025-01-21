@@ -2,10 +2,11 @@
     import closeIcon from "$lib/assets/icons8-multiply-30.png";
 
     export let activeItem: string | null = null;
-    export let selectedItems: string[] = [];
+    export let selectedItems: string[] | null = [];
 
-    function handleXClick() {
-        selectedItems = selectedItems.filter((i) => i !== activeItem);
+    export function handleXClick() {
+        selectedItems =
+            selectedItems && selectedItems.filter((i) => i !== activeItem);
         activeItem = null;
     }
 </script>
@@ -42,6 +43,6 @@
         font-weight: 100;
         margin: 0;
         padding-left: 5px;
-        font-size: smaller;
+        font-size: medium;
     }
 </style>
