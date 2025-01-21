@@ -37,7 +37,7 @@
 
 <style>
     .button-wrapper {
-        margin-right: 1em;
+        margin-right: 1.5em;
     }
     .button-text-wrapper {
         width: 97%;
