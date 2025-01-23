@@ -3,13 +3,12 @@
 </script>
 
 <div>
-    <iframe src={pdfUrl} width="100%" height="600px" title="PDF Viewer"
-    ></iframe>
+    <iframe src={pdfUrl} width="100%" height="100%" title="PDF Viewer"></iframe>
 </div>
 
 <style>
     div {
-        width: 100%;
-        height: 100%;
+        width: 60vw;
+        height: 60vh;
     }
 </style>
