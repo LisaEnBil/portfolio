@@ -74,10 +74,11 @@
         border-top: 2px solid #656363;
         border-right: 2px solid #eae9e9;
         border-bottom: 2px solid #eae9e9;
-        width: 29em;
-        height: 20em;
+        width: 70%;
+        min-height: 20em;
         justify-content: center;
         align-items: center;
+        padding: 2em;
     }
     .title {
         display: flex;
@@ -107,6 +108,7 @@
             overflow-y: scroll;
             display: flex;
             flex-direction: column;
+            width: 80%;
         }
         .text-content {
             display: flex;
